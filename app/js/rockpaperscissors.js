@@ -38,14 +38,18 @@ function getComputerMove(move) {
 }
 
 function getWinner(playerMove,computerMove) {
+    var winner;
+    var playerVictory === 0;
+    var computerVictory === 0;
+
     if (((playerMove = 'rock') && (computerMove ='scissors'))||
         ((playerMove = 'scissors') && (computerMove ='paper')) ||
         ((playerMove = 'paper') && (computerMove ='rock'))) {
-        return "player wins!!";
+        playerVictory === playerVictory += 1;
     }else if (((playerMove = 'rock') && (computerMove ='paper'))||
         ((playerMove = 'scissors') && (computerMove ='rock')) ||
         ((playerMove = 'paper') && (computerMove ='scissors'))) {
-        return "computer wins!!"
+        computerVictory === computerVictory += 1;
     }else {
         return "it's a draw!"
     }
@@ -60,6 +64,14 @@ function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
+
+    // This function should continue to play Rock Paper Scissors until either the player or 
+    //the computer has won five times.
+    // After each 'round', display some text in the console indicating who played
+    // what, who won, and what the current scoreboard looks like.
+    // For example,
+    //  console.log('Player chose ' + playerMove + ' while Computer chose ' + computerMove);
+    //  console.log('The score is currently ' + playerWins + ' to ' + computerWins + '\n');
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
     /* YOUR CODE HERE */
     return [playerWins, computerWins];
